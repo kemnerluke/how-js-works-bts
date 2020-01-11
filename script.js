@@ -10,7 +10,6 @@ function calculateAge(year){
 }
 
 
-retirment(1965);
 
 
 var retirment = function(year){
@@ -20,6 +19,19 @@ var retirment = function(year){
 retirment(1990);
 
 
+//variables
+
+console.log(age);
+var age = 23;
+console.log(age);
+
+function foo(){
+    var age=65;
+    console.log(age);
+
+}
+foo();
+console.log(age);
 
 
 
