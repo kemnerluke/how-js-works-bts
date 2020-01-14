@@ -3,7 +3,7 @@
 
 
 //functions
-calculateAge(1965);
+/*calculateAge(1965);
 
 function calculateAge(year){
     console.log(2016-year);
@@ -76,20 +76,50 @@ function first() {
 
 function third() {
     var d = 'John';
-    console.log(a + b + c + d);
+    console.log(c);
 }
 
-
+*/
 
 
 ///////////////////////////////////////
 // Lecture: The this keyword
 
 
+/*calculateAge(1985);
 
 
 
+function calculateAge(year){
+    console.log(2016 - year);
+    console.log(this);
+}
+*/
+var john = {
+    name:'john',
+    yearOfBirth:1990,
+    calculateAge: function(){
+        console.log(this);
+        console.log(2016-this.yearOfBirth);
+
+        function innerFunction(){
+            console.log(this);
+
+        }
+        innerFunction();
+    }
+}
 
 
+john.calculateAge();
+
+var mike = {
+    name:'Mike',
+    yearOfBirth:1984
+};
+
+mike.calculateAge= john.calculateAge;
+mike.calculateAge();
+}
 
 
